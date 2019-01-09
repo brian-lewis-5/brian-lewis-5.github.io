@@ -2,14 +2,14 @@ class OwlComponent extends HTMLElement {
   constructor() {
     super();
     
-    const element = document.createElement('h2')
+    const element = document.createElement('h2');
 
-    window.localStorage.setItem('sample_str', 'yum str');
-    window.localStorage.setItem('sample_obj', JSON.stringify({'yum_key': 'yum egg'}));
+    window.localStorage.setItem('str', 'yum str');
+    window.localStorage.setItem('obj', JSON.stringify({'yum_key': 'yum_obj_prop'}));
     element.innerHTML = `
-      sample_str: ${window.localStorage.getItem('sample_str')}
+      str: ${window.localStorage.getItem('str')}
       <br/>
-      sample_obj: ${JSON.parse(window.localStorage.getItem('sample_obj')).yum_key}
+      obj: ${JSON.parse(window.localStorage.getItem('obj')).yum_key}
     `;
     
     this
